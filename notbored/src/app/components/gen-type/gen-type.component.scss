@@ -1,0 +1,93 @@
+.cta {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  width: 100%;
+  height: 100%;
+  margin: 0;
+
+  background: #D37B61;
+  border-radius: 15px;
+}
+
+.content-box {
+  padding: 20px 20px 15px 20px;
+}
+
+h3 {
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+  color: #FFFFFF;
+  opacity: 0.8;
+}
+
+h4 {
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 18px;
+  font-variant: small-caps;
+  color: #2B2A2A;
+  opacity: 0.8;
+}
+
+p {
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 35px;
+  color: #000000;
+}
+
+button {
+  background-color: #D37B61;
+  display: flex;
+  justify-content: space-between;
+  border: none;
+  border-radius: 0px 0px 15px 15px;
+  width: 100%;
+  border-top: solid #00000030 2px;
+  margin: 0;
+  padding: 15px 20px;
+}
+
+button:hover {
+  text-decoration: underline;
+  background-color: #00000010;
+}
+
+button p,
+button svg {
+  margin: 0;
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 18px;
+  color: #141414;
+  opacity: 0.8;
+}
+
+.type-select {
+  background: #DC9581;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  width: 100%;
+  height: 35px;
+  color: white;
+  border: none;
+  padding: 5px;
+
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 30px;
+  color: rgba(255, 255, 255, 0.8);
+}

@@ -1,14 +1,53 @@
-<div class="main">
+<div class="container">
+
   <div class="aside">
-    <app-header></app-header>
-    <app-card></app-card>
+    <div class="header">
+      <!-- <app-header></app-header> -->
+    </div>
+
+    <div class="hello">
+      <h1>Hi 👋 <br> Alessandro</h1>
+      <h2>What activities<br>will you do today?</h2>
+
+    </div>
+    <div class="card-section">
+      <app-card></app-card>
+    </div>
+
+    <div class="bottom-btn">
+    </div>
+
   </div>
-  <div class="container">
-    <p>ciao</p>
-    <app-gen-random></app-gen-random>
+  <div class="content">
+    <h2>Choose here how to generate <br> your next activity.</h2>
+    <div class="cta-cards">
+      <div class="cta">
+        <app-gen-random></app-gen-random>
+      </div>
+      <div class="cta">
+        <app-gen-type></app-gen-type>
+      </div>
+    </div>
+
+    <div class="cta-cards">
+      <div class="cta">
+        <app-gen-budget></app-gen-budget>
+      </div>
+      <div class="cta">
+        <app-gen-group></app-gen-group>
+      </div>
+    </div>
+    <div class="cta-cards">
+      <div class="cta">
+        <app-gen-random></app-gen-random>
+      </div>
+    </div>
+
+
+    <!--
     <app-gen-type></app-gen-type>
     <app-gen-budget></app-gen-budget>
     <app-gen-group></app-gen-group>
-    <app-gen-easiness></app-gen-easiness>
+    <app-gen-easiness></app-gen-easiness> -->
   </div>
 </div>
