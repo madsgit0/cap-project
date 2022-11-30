@@ -1,5 +1,5 @@
 
-.container{
+.contain{
   display: flex;
   margin: 0;
   padding: 0;
@@ -15,7 +15,7 @@
 
   .header{
     height: 5%;
-    background-color: green;
+    // background-color: green;
 
   }
 
@@ -25,7 +25,8 @@
     justify-content: center;
     padding: 20px 0;
     height: 30%;
-    background-color: #fff;
+    // background-color: #fff;
+
     h1{
       font-family: 'Work Sans';
       font-style: normal;
@@ -49,11 +50,11 @@
   }
   .card-section{
     height: 50%;
-    background-color: red;
+    // background-color: red;
   }
   .bottom-btn{
     height: 1%;
-    background-color: rgb(4, 248, 0);
+    // background-color: rgb(4, 248, 0);
   }
 }
 
@@ -79,10 +80,19 @@
   .cta-cards{
     display: flex;
     width: 100%;
+    // background-color: #FFFFFF;
+    // margin: 10px;
     .cta{
       padding: 10px;
+      // background-color: gray;
+      // margin: 10px;
     }
   }
-
+  mat-slider {
+    width: 100%;
+  }
 }
 
+.navbar{
+  width: 100px;
+}
