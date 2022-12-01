@@ -15,11 +15,23 @@ export class CardComponent implements OnInit {
   constructor(private  GenService:GenService) { }
 
   ngOnInit(): void {
+    this.getRandom()
+    // this.getByPeople()
 
+  }
 
-
+  getRandom(){
     this.GenService.getRandom().subscribe(resp => this.activityList = resp)
   }
+  getByType(type: string){
+    this.GenService.getByType(type).subscribe(resp => this.activityList = resp)
+  }
+  // getByPeople(){
+  //   this.GenService.getByPeople().subscribe(resp => this.activityList = resp)
+  // }
+
+
+
 
   // ngOnInit(): void {
   //   this.GenService.getRandom().subscribe(resp => console.log(resp))
@@ -40,3 +52,5 @@ export class CardComponent implements OnInit {
 // }
 
 }
+
+

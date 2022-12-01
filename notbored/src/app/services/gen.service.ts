@@ -8,7 +8,7 @@ import { Activities } from '../classes/activities';
 })
 export class GenService {
 
-  private urlApi="http://www.boredapi.com/api/activity/";
+  private urlApi="http://www.boredapi.com/api/activity";
   // private urlApi="https://jsonplaceholder.typicode.com/users/";
 
   constructor(private http: HttpClient) { }
@@ -22,11 +22,11 @@ export class GenService {
   }
 
   getByType(type:string): Observable<Activities> {
-    return this.http.get<Activities>(this.urlApi+type);
+    return this.http.get<Activities>(this.urlApi+"?type=recreational");
   }
 
   getByPeople(participants:number): Observable<Activities> {
-    return this.http.get<Activities>(this.urlApi+participants);
+    return this.http.get<Activities>(this.urlApi+'?participants=1');
   }
 
   getByBudget(price:number): Observable<Activities> {
