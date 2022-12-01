@@ -16,10 +16,6 @@ export class GenService {
   getRandom():Observable<Activities> {
     return this.http.get<Activities>(this.urlApi);
   }
-// oppure
-  getR():Observable<Activities[]> {
-    return this.http.get<Activities[]>(this.urlApi+"music");
-  }
 
   getByType(type:string): Observable<Activities> {
     return this.http.get<Activities>(this.urlApi+"?type=recreational");
@@ -31,10 +27,6 @@ export class GenService {
 
   getByBudget(price:number): Observable<Activities> {
     return this.http.get<Activities>(this.urlApi+price);
-  }
-
-  getByEasiness(accessibility:number): Observable<Activities> {
-    return this.http.get<Activities>(this.urlApi+accessibility);
   }
 
   saveActivity(activity:Activities):Observable<Activities>{

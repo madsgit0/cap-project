@@ -13,19 +13,14 @@
   background-color: #7F5DDA;
   position: sticky;
 
-  .header{
-    height: 5%;
-    // background-color: green;
-
-  }
 
   .hello{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 20px 0;
-    height: 30%;
-    // background-color: #fff;
+    padding: 5px 0;
+    height: 20%;
+    background-color: rgb(106, 23, 196);
 
     h1{
       font-family: 'Work Sans';
@@ -47,15 +42,24 @@
       margin: 0;
       padding: 0;
     }
+    h3{
+      font-family: 'Work Sans';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 23px;
+      color: #FFFFFF;
+      opacity: 0.8;
+      margin: 0;
+      margin-top: 10px;
+      padding: 0;
+    }
   }
   .card-section{
-    height: 50%;
-    // background-color: red;
+    height: 70%;
+    background-color: red;
   }
-  .bottom-btn{
-    height: 1%;
-    // background-color: rgb(4, 248, 0);
-  }
+
 }
 
 .content{
@@ -75,6 +79,8 @@
     margin: 0;
     padding: 0;
     margin-bottom: 50px;
+    padding-bottom: 5px;
+    border-bottom: solid white 1.5px ;
   }
 
   .cta-cards{
@@ -88,11 +94,9 @@
       // margin: 10px;
     }
   }
-  mat-slider {
-    width: 100%;
-  }
+
 }
 
-.navbar{
-  width: 100px;
-}
+// .navbar{
+//   width: 100px;
+// }

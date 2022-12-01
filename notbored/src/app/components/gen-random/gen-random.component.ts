@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Activities } from 'src/app/classes/activities';
+import { GenService } from 'src/app/services/gen.service';
 
 @Component({
   selector: 'app-gen-random',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GenRandomComponent implements OnInit {
 
-  constructor() { }
+  activityList: Activities | undefined;
+
+  constructor(private  GenService:GenService) { }
 
   ngOnInit(): void {
+    this.getRandom()
+  }
+
+  getRandom(){
+    this.GenService.getRandom().subscribe(resp => this.activityList = resp)
   }
 
 }
+
+

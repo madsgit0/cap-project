@@ -1,7 +1,24 @@
+<div class="buttons">
+  <div class="btns-up">
+    <button (click)="getRandom()" class="btn-random">
+      Random🎲🎲🎲
+    </button>
+    <button (click)="getRandom()" class="btn-random">
+      Random🎲🎲🎲
+    </button>
+    <button (click)="getRandom()" class="btn-random">
+      Random🎲🎲🎲
+    </button>
+    <button (click)="getRandom()" class="btn-random">
+      Random🎲🎲🎲
+    </button>
+  </div>
+
+</div>
 <div *ngIf="activityList !== undefined" class="card_gen">
   <div class="activity">
     <h4>what do you think about...</h4>
-    <p>{{ activityList.activity }}</p>
+    <p>{{ activityList.activity }} ?</p>
   </div>
   <div class="activity-spec">
     <div class="type-actv">
@@ -26,60 +43,11 @@
       🎲 🎲 🎲 N e w A c t i v i t y 🎲 🎲 🎲
     </button>
   </div>
+
+  <div class="actions">
+    <!-- <button (click)="getByType('?type=recreational')">
+      🎲 🎲 🎲 N e w A c t i v i t y by type 🎲 🎲 🎲
+    </button> -->
+  </div>
+
 </div>
-
-<div class="actions">
-  <button (click)="getByType('?type=recreational')">
-    🎲 🎲 🎲 N e w A c t i v i t y by type 🎲 🎲 🎲
-  </button>
-</div>
-
-<!-- <table class="table">
-  <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngIf="activityList !== undefined">
-      <th scope="row">{{ activityList.activity }}</th>
-      <td>{{ activityList.participants }}</td>
-      <td>{{ activityList.price }}</td>
-      <td>{{ activityList.type }}</td>
-    </tr>
-
-  </tbody>
-</table> -->
-
-
-<!-- <table class="table">
-  <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">Name</th>
-      <th scope="col">Username</th>
-      <th scope="col">Email</th>
-      <th scope="col">Phone</th>
-      <th scope="col">Website</th>
-      <th scope="col"></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let item of activityList">
-      <th scope="row">{{ item.id }}</th>
-      <td>{{ item.activity }}</td>
-      <td>{{ item.username }}</td>
-      <td>{{ item.email }}</td>
-      <td>{{ item.phone }}</td>
-      <td>{{ item.website }}</td>
-      <td>
-        <button type="button" class="btn btn-danger" (click)="addActivity(item)">
-          +
-        </button>
-      </td>
-    </tr>
-  </tbody>
-</table> -->
