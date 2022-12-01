@@ -9,11 +9,12 @@ import { Activities } from '../classes/activities';
 export class GenService {
 
   private urlApi="http://www.boredapi.com/api/activity/";
+  // private urlApi="https://jsonplaceholder.typicode.com/users/";
 
   constructor(private http: HttpClient) { }
 
-  getRandom():Observable<Activities[]> {
-    return this.http.get<Activities[]>(this.urlApi);
+  getRandom():Observable<Activities> {
+    return this.http.get<Activities>(this.urlApi);
   }
 // oppure
   getR():Observable<Activities[]> {
@@ -40,8 +41,11 @@ export class GenService {
     return this.http.post<Activities>(this.urlApi, activity);
   }
 
-  deleteActivity(key:number):Observable<Activities>{
-    return this.http.delete<Activities>(this.urlApi+key);
+  addActivity(id:number | undefined):Observable<Activities>{
+    return this.http.get<Activities>(this.urlApi+id);
   }
+  // deleteActivity(id:number | undefined):Observable<Activities>{
+  //   return this.http.delete<Activities>(this.urlApi+id);
+  // }
 
 }

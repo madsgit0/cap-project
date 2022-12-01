@@ -9,9 +9,17 @@ import { GenService } from 'src/app/services/gen.service';
 })
 export class CardComponent implements OnInit {
 
-  activityList: Activities[] = [];
+  activityList: Activities | undefined;
+
 
   constructor(private  GenService:GenService) { }
+
+  ngOnInit(): void {
+
+
+
+    this.GenService.getRandom().subscribe(resp => this.activityList = resp)
+  }
 
   // ngOnInit(): void {
   //   this.GenService.getRandom().subscribe(resp => console.log(resp))
@@ -19,7 +27,16 @@ export class CardComponent implements OnInit {
 
 
 
-ngOnInit(): void {
-  this.GenService.getRandom().subscribe(resp => this.activityList = resp)
-}
+// addActivity(activity:Activities){
+//   this.GenService.addActivity(Activities.key).subscribe(resp => console.log(resp));
+// }
+// deleteActivity(activity:Activities){
+//   this.GenService.deleteActivity(Activities.id).subscribe(resp => console.log(resp));
+// }
+// deleteActivity(activity:Activities){
+//   this.GenService.deleteActivity(Activities.id).subscribe(resp =>{
+//     this.activityList = this.activityList.filter(ele => ele.id != Activities.id)
+//   });
+// }
+
 }

@@ -6,3 +6,15 @@ export class Activities {
   key!:number;
   accessibility! :number;
 }
+
+// export class Activities {
+//   id?: number;
+//   name?: string;
+//   username?: string;
+//   email?: string;
+//   phone?: string;
+//   website?: string;
+//   activity?: string;
+//   static id: number | undefined;
+// }
+
