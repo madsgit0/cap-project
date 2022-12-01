@@ -23,6 +23,14 @@ export class CardComponent implements OnInit {
   getRandom(){
     this.GenService.getRandom().subscribe(resp => this.activityList = resp)
   }
+  getByBudgetFree(price:string){
+    this.GenService.getByBudgetFree(price).subscribe(resp => this.activityList = resp)
+  }
+  getByBudgetPaid(price:string){
+    this.GenService.getByBudgetPaid(price).subscribe(resp => this.activityList = resp)
+  }
+
+
   getByType(type: string){
     this.GenService.getByType(type).subscribe(resp => this.activityList = resp)
   }

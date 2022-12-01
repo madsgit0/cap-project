@@ -3,15 +3,34 @@
     <button (click)="getRandom()" class="btn-random">
       Random🎲🎲🎲
     </button>
-    <button (click)="getRandom()" class="btn-random">
+    <div>
+      <button (click)="getByBudgetFree('?price=0.0')" class="btn-random">
+        For free 🙏
+      </button>
+      <button (click)="getByBudgetPaid('?minprice=0.1&maxprice=1')" class="btn-random">
+        No money problem here💸💸💸
+      </button>
+    </div>
+    <button (click)="getByType('?type=recreational')" class="btn-random">
       Random🎲🎲🎲
     </button>
-    <button (click)="getRandom()" class="btn-random">
-      Random🎲🎲🎲
-    </button>
-    <button (click)="getRandom()" class="btn-random">
-      Random🎲🎲🎲
-    </button>
+  </div>
+  <div class="btn-down">
+    <form>
+      <select class="type-select">
+        <option selected>Choose your preference</option>
+        <option value="?type=education">Education</option>
+        <option value="?type=recreational">Recreational</option>
+        <option value="?type=social">Social</option>
+        <option value="?type=diy">Diy</option>
+        <option value="?type=charity">Charity</option>
+        <option value="?type=cooking">Cooking</option>
+        <option value="?type=relaxation">Relaxation</option>
+        <option value="?type=music">Music</option>
+        <option value="?type=busywork">Busywork</option>
+      </select>
+      <input type="submit" value="Surprise me!">
+    </form>
   </div>
 
 </div>
@@ -44,10 +63,10 @@
     </button>
   </div>
 
-  <div class="actions">
-    <!-- <button (click)="getByType('?type=recreational')">
+  <!-- <div class="actions">
+    <button (click)="getByType('?type=recreational')">
       🎲 🎲 🎲 N e w A c t i v i t y by type 🎲 🎲 🎲
-    </button> -->
-  </div>
+    </button>
+  </div> -->
 
 </div>

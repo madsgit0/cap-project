@@ -21,12 +21,15 @@ export class GenService {
     return this.http.get<Activities>(this.urlApi+"?type=recreational");
   }
 
-  getByPeople(participants:number): Observable<Activities> {
+  getByPeople(participants:string): Observable<Activities> {
     return this.http.get<Activities>(this.urlApi+'?participants=1');
   }
 
-  getByBudget(price:number): Observable<Activities> {
-    return this.http.get<Activities>(this.urlApi+price);
+  getByBudgetFree(price:string): Observable<Activities> {
+    return this.http.get<Activities>(this.urlApi+'?price=0.0');
+  }
+  getByBudgetPaid(price:string): Observable<Activities> {
+    return this.http.get<Activities>(this.urlApi+'?minprice=0.1&maxprice=1');
   }
 
   saveActivity(activity:Activities):Observable<Activities>{
