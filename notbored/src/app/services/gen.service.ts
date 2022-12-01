@@ -1,0 +1,47 @@
+import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+import { Activities } from '../classes/activities';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class GenService {
+
+  private urlApi="http://www.boredapi.com/api/activity/";
+
+  constructor(private http: HttpClient) { }
+
+  getRandom():Observable<Activities[]> {
+    return this.http.get<Activities[]>(this.urlApi);
+  }
+// oppure
+  getR():Observable<Activities[]> {
+    return this.http.get<Activities[]>(this.urlApi+"music");
+  }
+
+  getByType(type:string): Observable<Activities> {
+    return this.http.get<Activities>(this.urlApi+type);
+  }
+
+  getByPeople(participants:number): Observable<Activities> {
+    return this.http.get<Activities>(this.urlApi+participants);
+  }
+
+  getByBudget(price:number): Observable<Activities> {
+    return this.http.get<Activities>(this.urlApi+price);
+  }
+
+  getByEasiness(accessibility:number): Observable<Activities> {
+    return this.http.get<Activities>(this.urlApi+accessibility);
+  }
+
+  saveActivity(activity:Activities):Observable<Activities>{
+    return this.http.post<Activities>(this.urlApi, activity);
+  }
+
+  deleteActivity(key:number):Observable<Activities>{
+    return this.http.delete<Activities>(this.urlApi+key);
+  }
+
+}

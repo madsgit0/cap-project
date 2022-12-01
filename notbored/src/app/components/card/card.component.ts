@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Activities } from 'src/app/classes/activities';
+import { GenService } from 'src/app/services/gen.service';
 
 @Component({
   selector: 'app-card',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CardComponent implements OnInit {
 
-  constructor() { }
+  activityList: Activities[] = [];
 
-  ngOnInit(): void {
-  }
+  constructor(private  GenService:GenService) { }
 
+  // ngOnInit(): void {
+  //   this.GenService.getRandom().subscribe(resp => console.log(resp))
+  // }
+
+
+
+ngOnInit(): void {
+  this.GenService.getRandom().subscribe(resp => this.activityList = resp)
+}
 }

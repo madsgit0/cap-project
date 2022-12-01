@@ -1,24 +1,24 @@
-<div class="card_gen">
+<!-- <div *ngFor="let item of activityList" class="card_gen">
   <div class="activity">
     <h4>what do you think about...</h4>
-    <p>Sit in the dark and listen to your favorite music with no distractions?</p>
+    <p>{{item.activity}}</p>
   </div>
   <div class="activity-spec">
     <div class="type-actv">
       <h5>type</h5>
-      <p>Relaxation</p>
+      <p>{{item.type}}</p>
     </div>
     <div class="detail">
       <h5>budget</h5>
-      <p>0.1</p>
+      <p>{{item.price}}</p>
     </div>
     <div class="detail">
       <h5>people</h5>
-      <p>1</p>
+      <p>{{item.participants}}</p>
     </div>
     <div class="detail">
       <h5>easiness</h5>
-      <p>0.1</p>
+      <p>{{item.accessibility}}</p>
     </div>
   </div>
   <div class="actions">
@@ -26,4 +26,24 @@
       save
     </button>
   </div>
-</div>
+</div> -->
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+      <th scope="col">Handle</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of activityList">
+      <th scope="row">{{item.activity}}</th>
+      <td>{{item.activity}}</td>
+      <td>{{item.activity}}</td>
+      <td>{{item.activity}}</td>
+    </tr>
+
+  </tbody>
+</table>
