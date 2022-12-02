@@ -9,8 +9,19 @@ import { GenService } from 'src/app/services/gen.service';
 })
 export class CardComponent implements OnInit {
 
-  activityList: Activities | undefined;
 
+  peopleType = '?participants=';
+  nPeople = '';
+  people = this.peopleType+this.nPeople;
+
+  user: string = '';
+  clickme() {
+    this.people+this.user;
+    console.log('?participants='+this.user);
+  }
+
+
+  activityList: Activities | undefined;
 
   constructor(private  GenService:GenService) { }
 
@@ -29,11 +40,19 @@ export class CardComponent implements OnInit {
   getByBudgetPaid(price:string){
     this.GenService.getByBudgetPaid(price).subscribe(resp => this.activityList = resp)
   }
+  getByPeople(participants:any){
+    this.GenService.getByPeople(participants).subscribe(resp => this.activityList = resp)
+  }
+
+  // getByPeople(price:string){
+  //   this.GenService.getByPeople(price).subscribe(resp => console.log(resp))
+  // }
 
 
   getByType(type: string){
     this.GenService.getByType(type).subscribe(resp => this.activityList = resp)
   }
+
   // getByPeople(){
   //   this.GenService.getByPeople().subscribe(resp => this.activityList = resp)
   // }
@@ -60,5 +79,6 @@ export class CardComponent implements OnInit {
 // }
 
 }
+
 
 

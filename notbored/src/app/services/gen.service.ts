@@ -8,10 +8,18 @@ import { Activities } from '../classes/activities';
 })
 export class GenService {
 
+  peopleApi = '?participants=';
+  nPeople = '';
+  people = this.peopleApi+this.nPeople;
+
+
+
   private urlApi="http://www.boredapi.com/api/activity";
   // private urlApi="https://jsonplaceholder.typicode.com/users/";
 
   constructor(private http: HttpClient) { }
+
+  // getNumPeople()
 
   getRandom():Observable<Activities> {
     return this.http.get<Activities>(this.urlApi);
@@ -22,7 +30,8 @@ export class GenService {
   }
 
   getByPeople(participants:string): Observable<Activities> {
-    return this.http.get<Activities>(this.urlApi+'?participants=1');
+    //return this.http.get<Activities>(this.urlApi);
+     return this.http.get<Activities>(this.urlApi + this.people);
   }
 
   getByBudgetFree(price:string): Observable<Activities> {
