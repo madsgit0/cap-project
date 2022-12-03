@@ -13,6 +13,7 @@ import { CardComponent } from './components/card/card.component';
 import { ListCardComponent } from './components/list-card/list-card.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { AuthModule } from './auth/auth.module';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserAnimationsModule,
     FormsModule,
     HttpClientModule,
+    AuthModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
