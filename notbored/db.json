@@ -1,13 +1,13 @@
 {
-  "user": [
+  "users": [
     {
       "firstname": "Mario",
       "lastname": "Rossi",
       "mail": "mariorossi@gmail.com",
       "password": "Rossi1234"
     }
-
   ],
+
   "posts": [
     {
       "activity": "learn to greet someone in a new language",
