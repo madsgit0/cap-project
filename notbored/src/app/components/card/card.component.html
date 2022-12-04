@@ -37,7 +37,7 @@
   <div class="btn-down">
     <h3>Are you looking for somethig specific? Choose by type👇👇👇</h3>
     <form>
-      <select class="type-select">
+      <select class="type-select" id="atype" name="atype" [(ngModel)]="atype">
         <option selected>Choose your preference</option>
         <option value="?type=education">Education</option>
         <option value="?type=recreational">Recreational</option>
@@ -49,7 +49,7 @@
         <option value="?type=music">Music</option>
         <option value="?type=busywork">Busywork</option>
       </select>
-      <input type="submit" value="Surprise me!">
+      <input type="submit" value="Surprise me!" (click)="getByType(atype)">
     </form>
   </div>
 

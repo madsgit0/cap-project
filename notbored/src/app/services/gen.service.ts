@@ -9,14 +9,13 @@ import { Activities } from '../classes/activities';
 export class GenService {
 
   peopleApi = '?participants=';
-  typeApi = '?participants=';
+  //typeApi = '?type=';
   // nPeople = '';
   // people = this.peopleApi+this.nPeople;
 
 
 
   private urlApi="http://www.boredapi.com/api/activity";
-  // private urlApi="https://jsonplaceholder.typicode.com/users/";
 
   constructor(private http: HttpClient) { }
 
@@ -26,22 +25,23 @@ export class GenService {
     return this.http.get<Activities>(this.urlApi);
   }
 
-  getByType(type:string): Observable<Activities> {
-    return this.http.get<Activities>(this.urlApi+"?type=recreational");
-  }
-
-  getByPeople(participants:string): Observable<Activities> {
-    //return this.http.get<Activities>(this.urlApi);
-    console.log(this.urlApi + this.peopleApi + participants);
-    return this.http.get<Activities>(this.urlApi + this.peopleApi + participants);
-  }
-
   getByBudgetFree(price:string): Observable<Activities> {
     return this.http.get<Activities>(this.urlApi+'?price=0.0');
   }
   getByBudgetPaid(price:string): Observable<Activities> {
     return this.http.get<Activities>(this.urlApi+'?minprice=0.1&maxprice=1');
   }
+
+  getByPeople(participants:string): Observable<Activities> {
+    //console.log(this.urlApi + this.peopleApi + participants);
+    return this.http.get<Activities>(this.urlApi + this.peopleApi + participants);
+  }
+
+  getByType(type:string): Observable<Activities> {
+    //console.log(this.urlApi + this.typeApi + type);
+    return this.http.get<Activities>(this.urlApi + type);
+  }
+
 
   saveActivity(activity:Activities):Observable<Activities>{
     return this.http.post<Activities>(this.urlApi, activity);

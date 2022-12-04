@@ -10,10 +10,10 @@ import { GenService } from 'src/app/services/gen.service';
 export class CardComponent implements OnInit {
 
 
-  peopleType = '?participants=';
-  nPeople = '';
-  people = this.peopleType+this.nPeople;
-
+  // peopleType = '?participants=';
+  // nPeople = '';
+  // people = this.peopleType+this.nPeople;
+  atype: string = '';
   user: string = '';
   // clickme() {
   //   this.people+this.user;
@@ -43,12 +43,6 @@ export class CardComponent implements OnInit {
   getByPeople(participants:any){
     this.GenService.getByPeople(participants).subscribe(resp => this.activityList = resp)
   }
-
-  // getByPeople(price:string){
-  //   this.GenService.getByPeople(price).subscribe(resp => console.log(resp))
-  // }
-
-
   getByType(type: string){
     this.GenService.getByType(type).subscribe(resp => this.activityList = resp)
   }
