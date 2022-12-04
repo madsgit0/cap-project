@@ -10,31 +10,28 @@
           <p class="text-secondary">Inserisci i tuoi dati e inizia subito la tua prova gratuita di 30 giorni!</p>
         </div>
 
-        <form #f="ngForm" (ngSubmit)="onSubmit()" class="px-3">
-          <div class="mb-3 animate__animated animate__fadeInUp ">
-            <label for="firstname" class="form-label">Nome</label>
-            <input ngModel name="firstname" type="text" class="form-control" id="firstname" />
+        <form #f="ngForm" (ngSubmit)="onSubmit()">
+          <div class="mb-3">
+            <label for="firstname" class="form-label">Firstname</label>
+            <input type="text" ngModel name="firstname" class="form-control" id="firstname">
           </div>
-
-          <div class="mb-3 animate__animated animate__fadeInUp ">
-            <label for="lastname" class="form-label">Cognome</label>
-            <input ngModel name="lastname" type="text" class="form-control" id="lastname" />
+          <div class="mb-3">
+            <label for="lastname" class="form-label">Lastname</label>
+            <input type="text" ngModel name="lastname" class="form-control" id="lastname">
           </div>
-
-          <div class="mb-3 animate__animated animate__fadeInUp ">
+          <div class="mb-3">
             <label for="email" class="form-label">Email</label>
-            <input ngModel name="email" type="email" class="form-control" id="email" />
+            <input type="email" ngModel name="email" class="form-control" id="email">
           </div>
-
-          <div class="mb-3 animate__animated animate__fadeInUp ">
+          <div class="mb-3">
             <label for="password" class="form-label">Password</label>
-            <input ngModel name="password" type="password" class="form-control" id="password" />
+            <input type="password" ngModel name="password" class="form-control" id="password">
           </div>
-          <button type="submit" class="animate__animated animate__fadeInUp btn btn-primary mt-3 w-100 "
-            control-id="ControlID-4">
-            Crea il mio account
-          </button>
+          <button type="submit" class="btn btn-primary">Submit</button>
         </form>
+        <h3 *ngIf="error">{{ error }}</h3>
+
+
         <div *ngIf="error" class="toast align-items-center text-bg-danger border-0 fade show" role="alert"
           aria-live="assertive" aria-atomic="true">
           <div class="d-flex">
