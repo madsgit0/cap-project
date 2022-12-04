@@ -3,8 +3,36 @@
     {
       "firstname": "Mario",
       "lastname": "Rossi",
-      "mail": "mariorossi@gmail.com",
-      "password": "Rossi1234"
+      "email": "mariorossi@gmail.com",
+      "password": "Rossi1234",
+      "id": 1
+    },
+    {
+      "email": "zuqu@mailinator.com",
+      "password": "$2a$10$mz24lUItvugiZamj2RxVmuXtcEbbx9Kxf.U8ubOo1MyL7AhZ28YnG",
+      "firstname": "Yardley",
+      "lastname": "Browning",
+      "id": 2
+    }
+  ],
+  "posts": [
+    {
+      "activity": "learn to greet someone in a new language",
+      "type": "Education",
+      "participants": 1,
+      "price": 0.1,
+      "key": 0,
+      "accessibility" : 0.2,
+      "id": 1
+    },
+    {
+      "activity": "uninstall unused apps from your devices",
+      "type": "Busywork",
+      "participants": 1,
+      "price": 0,
+      "key": 0,
+      "accessibility" : 0,
+      "id": 2
     }
   ]
 }

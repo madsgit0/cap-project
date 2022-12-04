@@ -9,8 +9,9 @@ import { Activities } from '../classes/activities';
 export class GenService {
 
   peopleApi = '?participants=';
-  nPeople = '';
-  people = this.peopleApi+this.nPeople;
+  typeApi = '?participants=';
+  // nPeople = '';
+  // people = this.peopleApi+this.nPeople;
 
 
 
@@ -31,7 +32,8 @@ export class GenService {
 
   getByPeople(participants:string): Observable<Activities> {
     //return this.http.get<Activities>(this.urlApi);
-     return this.http.get<Activities>(this.urlApi + this.people);
+    console.log(this.urlApi + this.peopleApi + participants);
+    return this.http.get<Activities>(this.urlApi + this.peopleApi + participants);
   }
 
   getByBudgetFree(price:string): Observable<Activities> {

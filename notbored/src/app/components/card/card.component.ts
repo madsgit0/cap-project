@@ -15,10 +15,10 @@ export class CardComponent implements OnInit {
   people = this.peopleType+this.nPeople;
 
   user: string = '';
-  clickme() {
-    this.people+this.user;
-    console.log('?participants='+this.user);
-  }
+  // clickme() {
+  //   this.people+this.user;
+  //   console.log('?participants='+this.user);
+  // }
 
 
   activityList: Activities | undefined;
