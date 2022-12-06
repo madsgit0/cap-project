@@ -1,1 +1,109 @@
-<p>list-card works!</p>
+<div class="container-fluid warp">
+
+  <div ngClass={{post.done}} class="card_gen" *ngFor="let post of posts, let i=index">
+    <div class="activity">
+      <p> {{i+1}} - {{post.activity}}</p>
+    </div>
+    <div class="activity-spec">
+      <div class="type-actv">
+        <h5>type</h5>
+        <p> {{post.type}} </p>
+      </div>
+      <div class="detail">
+        <h5>budget</h5>
+        <p> {{post.price}} </p>
+      </div>
+      <div class="detail">
+        <h5>people</h5>
+        <p> {{post.participants}} </p>
+      </div>
+
+    </div>
+
+
+    <div class="actions">
+      <button (click)="donePost(i)">
+        <i class="bi bi-check-circle"></i>
+      </button>
+
+      <button (click)="deletePost(i)">
+        <i class="bi bi-trash2-fill"></i>
+      </button>
+    </div>
+  </div>
+  <!-- <div class="card_gen">
+    <div class="activity">
+      <p>Memorize the fifty states and their capitals</p>
+    </div>
+    <div class="activity-spec">
+      <div class="type-actv">
+        <h5>type</h5>
+        <p>Music</p>
+      </div>
+      <div class="detail">
+        <h5>budget</h5>
+        <p>1</p>
+      </div>
+      <div class="detail">
+        <h5>people</h5>
+        <p>4</p>
+      </div>
+
+    </div>
+    <div class="actions">
+      <button>
+        DONE
+      </button>
+    </div>
+  </div>
+  <div class="card_gen">
+    <div class="activity">
+      <p>write a short story</p>
+    </div>
+    <div class="activity-spec">
+      <div class="type-actv">
+        <h5>type</h5>
+        <p>Music</p>
+      </div>
+      <div class="detail">
+        <h5>budget</h5>
+        <p>1</p>
+      </div>
+      <div class="detail">
+        <h5>people</h5>
+        <p>4</p>
+      </div>
+
+    </div>
+    <div class="actions">
+      <button>
+        DONE
+      </button>
+    </div>
+  </div>
+  <div class="card_gen">
+    <div class="activity">
+      <p>Write a short story</p>
+    </div>
+    <div class="activity-spec">
+      <div class="type-actv">
+        <h5>type</h5>
+        <p>Recreational</p>
+      </div>
+      <div class="detail">
+        <h5>budget</h5>
+        <p>1</p>
+      </div>
+      <div class="detail">
+        <h5>people</h5>
+        <p>4</p>
+      </div>
+
+    </div>
+    <div class="actions">
+      <button>
+        DONE
+      </button>
+    </div>
+  </div> -->
+</div>

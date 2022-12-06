@@ -5,9 +5,10 @@ import { HomeComponent } from './pages/home/home.component';
 import { SavedComponent } from './pages/saved/saved.component';
 import { RegisterPage } from './auth/register/register.page';
 import { LoginPage } from './auth/login/login.page';
+import { AuthGuard } from './auth/auth.guard';
 
 const routes: Routes = [
-  {path:'', component: HomeComponent },
+  {path:'', component: HomeComponent, canActivate:[AuthGuard] },
   {path:'saved', component: SavedComponent },
   {path:'done', component: DoneComponent },
   {path:'register', component: RegisterPage },

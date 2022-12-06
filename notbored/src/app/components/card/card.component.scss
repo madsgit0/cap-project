@@ -44,7 +44,8 @@
 
   .btn-free{
     background-color: #99A5A9;
-    border-radius: 15px 15px 15px 15px ;
+    border-radius: 15px 15px 15px 15px;
+    margin-right: 5px;
   }
   .btn-free:hover{
     background-color: #99A5A9e8;
@@ -52,6 +53,7 @@
   .btn-paid{
     background-color: #D9D9D9;
     border-radius: 15px 15px 15px 15px ;
+    //margin-left: 5px;
 
     font-size: 15px;
   }
