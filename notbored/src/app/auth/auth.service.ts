@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { JwtHelperService } from '@auth0/angular-jwt';
 import { tap } from 'rxjs/operators';
 import { environment } from 'src/environments/environment';
 import { RegisterAuth } from './register-auth';
@@ -19,7 +20,9 @@ export interface AuthData {
 })
 export class AuthService {
 
-  private isLogin = true;
+  private isLogin: AuthData | null = null;
+  helper = new JwtHelperService();
+
 
   constructor(private http:HttpClient) {
     this.restore();
@@ -28,9 +31,12 @@ export class AuthService {
   restore() {
     const userLogin = localStorage.getItem('userLogin');
     if(userLogin){
-      this.isLogin = true;
-    }else{
-      this.isLogin = false;
+      let userLoggedIn: AuthData = JSON.parse(userLogin);
+      if(! this.helper.isTokenExpired(userLoggedIn.accessToken)){
+        this.isLogin = userLoggedIn;
+      }
+    } else {
+      this.isLogin = null;
     }
   }
 
@@ -42,7 +48,7 @@ export class AuthService {
     return this.http.post<AuthData>(environment.urlAPI + 'login', obj).pipe(
       tap((data) => {
         console.log(data)
-        this.isLogin = true;
+        this.isLogin = data;
         console.log(this.isLogin)
       })
     )
