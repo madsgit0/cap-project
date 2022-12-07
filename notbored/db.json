@@ -22,5 +22,41 @@
       "id": 3
     }
   ],
-  "posts" :[]
+  "posts": [
+    {
+      "activity": "learn to greet someone in a new language",
+      "type": "Education",
+      "participants": 1,
+      "price": 0.1,
+      "done": "",
+      "id": 1
+    },
+    {
+      "activity": "learn calligraphy",
+      "type": "Education",
+      "participants": 1,
+      "price": 0.1,
+      "done": "done",
+      "id": 2
+    },
+    {
+      "activity": "do yoga",
+      "type": "Recreational",
+      "participants": 1,
+      "price": 0.1,
+      "id": 3
+    },
+    {
+      "id": 4
+    },
+    {
+      "id": 5
+    },
+    {
+      "id": 6
+    },
+    {
+      "id": 7
+    }
+  ]
 }

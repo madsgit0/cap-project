@@ -16,13 +16,14 @@ export class GenService {
 
 
   private urlApi="http://www.boredapi.com/api/activity";
+  private urlPosts="http://localhost:3000/posts";
 
   constructor(private http: HttpClient) { }
 
   // getNumPeople()
 
   getRandom():Observable<Activities> {
-    return this.http.get<Activities>(this.urlApi);
+    return this.http.get<Activities>(this.urlPosts);
   }
 
   getByBudgetFree(price:string): Observable<Activities> {
@@ -43,8 +44,12 @@ export class GenService {
   }
 
 
-  saveActivity(activity:Activities):Observable<Activities>{
-    return this.http.post<Activities>(this.urlApi, activity);
+  // getPosts():Observable<Activities> {
+  //   return this.http.get<Activities>(this.urlPosts);
+  // }
+
+  saveActivity():Observable<Activities>{
+    return this.http.post<Activities>(this.urlPosts, Activities);
   }
 
   addActivity(id:number | undefined):Observable<Activities>{

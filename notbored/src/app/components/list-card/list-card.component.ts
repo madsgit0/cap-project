@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Activities } from 'src/app/classes/activities';
+import { GenService } from 'src/app/services/gen.service';
 
 @Component({
   selector: 'app-list-card',
@@ -8,7 +9,8 @@ import { Activities } from 'src/app/classes/activities';
 })
 export class ListCardComponent implements OnInit {
 
-  posts = [{
+  posts = [
+    {
     activity: "learn to greet someone in a new language",
     type: "Education",
     participants: 1,
@@ -36,9 +38,10 @@ export class ListCardComponent implements OnInit {
 
   activityList: Activities | undefined;
 
-  constructor() { }
+  constructor(private  GenService:GenService) { }
 
   ngOnInit(): void {
+    //this.getPosts()
   }
 
   donePost(i: number){

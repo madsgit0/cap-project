@@ -9,24 +9,15 @@ import { GenService } from 'src/app/services/gen.service';
 })
 export class CardComponent implements OnInit {
 
-
-  // peopleType = '?participants=';
-  // nPeople = '';
-  // people = this.peopleType+this.nPeople;
   atype: string = '';
   user: string = '';
-  // clickme() {
-  //   this.people+this.user;
-  //   console.log('?participants='+this.user);
-  // }
-
 
   activityList: Activities | undefined;
 
   constructor(private  GenService:GenService) { }
 
   ngOnInit(): void {
-    this.getRandom()
+    //this.getRandom()
     // this.getByPeople()
 
   }
@@ -45,6 +36,10 @@ export class CardComponent implements OnInit {
   }
   getByType(type: string){
     this.GenService.getByType(type).subscribe(resp => this.activityList = resp)
+  }
+
+  saveActivity(){
+    this.GenService.saveActivity().subscribe(resp => this.activityList = resp)
   }
 
   // getByPeople(){
