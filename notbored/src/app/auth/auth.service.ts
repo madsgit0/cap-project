@@ -4,6 +4,7 @@ import { JwtHelperService } from '@auth0/angular-jwt';
 import { tap } from 'rxjs/operators';
 import { environment } from 'src/environments/environment';
 import { RegisterAuth } from './register-auth';
+import { Router } from '@angular/router';
 
 export interface AuthData {
   accessToken: string;
@@ -24,7 +25,7 @@ export class AuthService {
   helper = new JwtHelperService();
 
 
-  constructor(private http:HttpClient) {
+  constructor(private http:HttpClient,  private router: Router) {
     this.restore();
   }
 
@@ -38,6 +39,14 @@ export class AuthService {
     } else {
       this.isLogin = null;
     }
+  }
+
+  logout(){
+    this.isLogin = null;
+    this.router.navigate(['/login'])
+    //localStorage.clear()
+    localStorage.removeItem('userlogin')
+    console.log(this.isLogin)
   }
 
   signup(obj: RegisterAuth){
