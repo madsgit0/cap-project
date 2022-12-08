@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './pages/home/home.component';
 import { SavedComponent } from './pages/saved/saved.component';
-import { DoneComponent } from './pages/done/done.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HeaderComponent } from './components/header/header.component';
 import { CardComponent } from './components/card/card.component';
@@ -14,14 +13,13 @@ import { ListCardComponent } from './components/list-card/list-card.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AuthModule } from './auth/auth.module';
-import { HomePage } from './pages/home/home/home.page';
+import { HomePage } from './pages/home2/home.page';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     SavedComponent,
-    DoneComponent,
     NavbarComponent,
     HeaderComponent,
     CardComponent,
