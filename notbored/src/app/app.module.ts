@@ -14,6 +14,7 @@ import { ListCardComponent } from './components/list-card/list-card.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AuthModule } from './auth/auth.module';
+import { HomePage } from './pages/home/home/home.page';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { AuthModule } from './auth/auth.module';
     HeaderComponent,
     CardComponent,
     ListCardComponent,
+    HomePage,
   ],
   imports: [
     BrowserModule,

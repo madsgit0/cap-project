@@ -17,7 +17,7 @@ export class CardComponent implements OnInit {
   constructor(private  GenService:GenService) { }
 
   ngOnInit(): void {
-    //this.getRandom()
+    this.getRandom()
     // this.getByPeople()
 
   }

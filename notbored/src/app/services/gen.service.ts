@@ -23,7 +23,7 @@ export class GenService {
   // getNumPeople()
 
   getRandom():Observable<Activities> {
-    return this.http.get<Activities>(this.urlPosts);
+    return this.http.get<Activities>(this.urlApi);
   }
 
   getByBudgetFree(price:string): Observable<Activities> {

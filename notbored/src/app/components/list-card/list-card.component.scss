@@ -1,114 +1,99 @@
-.a{
-  background: #A588F8;
-  border-radius: 20px;
-  width: 100%;
-  padding: 20px;
-  min-height: 80px;
-  box-sizing: border-box;
-  margin-bottom: 10px;
-
-}
-
-.warp{
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.card_gen {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 30%;
-  height: 65%;
-  margin: 10px;
-  background: #A588F8;
-  border-radius: 30px;
-}
-
 .done{
   background: #7e6ab4;
   text-decoration: line-through;
 }
-.don{
-  background: #938c52;
+
+.lst-card{
+  background: #A588F8;
+  border-radius: 20px;
+  width: 100%;
+  padding: 20px;
+  min-height: 120px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
 }
 
-.activity {
-  margin: 23px 20px 80px 20px;
-}
+.activity-txt{
+  p{
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 25px;
+    color: #000000;
+  }
+  @media (max-width: 768px) {
+    p{
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
 
-.activity p {
-  font-family: 'Work Sans';
-  font-style: normal;
-  font-weight: 500;
-  font-size: 30px;
-  line-height: 35px;
-  text-transform: lowercase;
-  color: #000000;
 }
-
 
 .activity-spec {
-  display: flex;
-  justify-content: space-between;
-  margin: 20px;
-  padding-top: 10px;
-  border-top: solid #00000050 2px
+  h5 {
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    margin-bottom: 4px;
+    line-height: 14px;
+    font-variant: small-caps;
+    color: #141414;
+    opacity: 0.8;
+  }
+  p {
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: capitalize;
+    color: #141414;
+    opacity: 0.8;
+  }
+
+  @media (max-width: 768px) {
+    padding-top: 10px;
+    border-top: solid #00000050 2px
+  }
 }
-
-.activity-spec p {
-  font-family: 'Work Sans';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 25px;
-  line-height: 29px;
-  text-transform: capitalize;
-  color: #141414;
-  opacity: 0.8;
-}
-
-.type-actv {
-  width: 40%;
-}
-
-// .detail {
-
-// }
 
 .actions {
   box-sizing: border-box;
-  margin: 20px;
-  display: flex;
-justify-content: space-between;
-}
+  align-items: center;
 
-.actions button {
-  width: 50%;
-  margin: 0 5px;
+  button {
+  min-width: 38px;
+  max-height: 33px ;
+  margin-left: 5px;
   height: 50px;
   background: #E0D56D;
-  border-radius: 15px;
+  border-radius: 16px;
   border: none;
+  }
+
+  button:hover{
+    background: #d4c751;
+  }
+
+  .delete{
+    background: #e3101000;
+    border: solid black 1px;
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    color: #000000;
+  }
+  .delete:hover{
+    background: #e31010;
+    color: white;
+    border: solid #e31010 1px;
+  }
+
 }
 
-h4 {
-  font-family: 'Work Sans';
-  font-style: normal;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 18px;
-  font-variant: small-caps;
-  color: #2B2A2A;
-  opacity: 0.8;
-}
 
-h5 {
-  font-family: 'Work Sans';
-  font-style: normal;
-  font-weight: 500;
-  font-size: 15px;
-  line-height: 14px;
-  font-variant: small-caps;
-  color: #141414;
-  opacity: 0.8;
-}
+
