@@ -44,6 +44,7 @@ export class ListCardComponent implements OnInit {
     //this.getPosts()
   }
 
+
   donePost(i: number){
     this.posts[i].done = this.posts[i].done === "done" ? "" : "done" ;
   }

@@ -20,6 +20,13 @@
       "firstname": "Jacob",
       "lastname": "Dunn",
       "id": 3
+    },
+    {
+      "email": "fejixacemu@mailinator.com",
+      "password": "$2a$10$937eNkSNQ/kch40uN8GkUOfd2EhAbE0mKGAY.w0QiWpMRFabrlzky",
+      "firstname": "Charde",
+      "lastname": "Boone",
+      "id": 4
     }
   ],
   "posts": [
@@ -57,6 +64,40 @@
     },
     {
       "id": 7
+    },
+    {
+      "id": 8
+    },
+    {
+      "id": 9
+    },
+    {
+      "id": 10
+    },
+    {
+      "id": 11
+    },
+    {
+      "id": 12
+    },
+    {
+      "id": 13
+    },
+    {
+      "id": 14
+    },
+    {
+      "activity": "do qualcosa",
+      "type": "music",
+      "participants": 1,
+      "price": 0,
+      "id": 20
+    },
+    {
+      "id": 21
+    },
+    {
+      "id": 22
     }
   ]
 }

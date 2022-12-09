@@ -1,4 +1,146 @@
-<div class="buttons">
+<!-- contenitore generale -->
+<div class="content-fluid">
+  <!-- row con due colonne da 12 /bottoni//card/-->
+  <div class="row">
+    <!-- prima colonna da 12 per bottoni-->
+    <div class="col-12 buttons">
+      <!-- row con 2 colonne da 12 per bottoni-->
+      <div class="row">
+        <!-- prima colonna da 12 per bottoni superiori-->
+        <div class="col-12 btns-up mb-2">
+          <!-- row con 3 colonne per bottoni superiori-->
+          <div class="row gy-3 align-btn ">
+            <!-- random btn -->
+            <div class="col-4">
+              <button (click)="getRandom()" class="btns btn-random">
+                Random <br> 🎲🎲🎲
+              </button>
+            </div>
+            <!-- bdg btn -->
+            <div class="col-8">
+              <div class="bdg-btn">
+                <button (click)="getByBudgetFree('?price=0.0')" class="btns btn-free">
+                  For free <br> 🙏
+                </button>
+                <button (click)="getByBudgetPaid('?minprice=0.1&maxprice=1')" class="btns btn-paid">
+                  No money <br>problem <br>here💸💸💸
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- seconda colonna da 12 per bottoni inferiori-->
+        <div class="col-12 mb-2">
+          <div class="btn-people">
+            <!-- people btn -->
+            <form>
+              <p>Too many people? Generate an activity for </p>
+              <input type="number" placeholder="2" id="user" name="user" min="2" max="10" [(ngModel)]="user">
+              <button type="button" (click)="getByPeople(user)">
+                <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0.999977 5.00002H9.00002" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M5 1L9.00002 5.00002L5 9.00005" stroke="white" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </button>
+            </form>
+          </div>
+        </div>
+        <!-- terza colonna da 12 per bottoni inferiori-->
+        <div class="col-12 mb-4">
+          <div class="btn-down">
+            <h3>Are you looking for something specific? Choose by type👇👇👇</h3>
+            <form>
+              <select class="type-select" id="atype" name="atype" [(ngModel)]="atype">
+                <option selected>Choose your preference</option>
+                <option value="?type=education">Education</option>
+                <option value="?type=recreational">Recreational</option>
+                <option value="?type=social">Social</option>
+                <option value="?type=diy">Diy</option>
+                <option value="?type=charity">Charity</option>
+                <option value="?type=cooking">Cooking</option>
+                <option value="?type=relaxation">Relaxation</option>
+                <option value="?type=music">Music</option>
+                <option value="?type=busywork">Busywork</option>
+              </select>
+              <input type="submit" value="Surprise me!" (click)="getByType(atype)">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- seconda colonna da 12 card -->
+    <div class="col-12">
+      <!-- ------------ -->
+      <div class="lst-card">
+        <div class="row">
+          <div class="col-12 activity-txt" *ngIf="activityList !== undefined">
+            <h4>what do you think about...</h4>
+            <p>...{{ activityList.activity }}?</p>
+          </div>
+
+          <div class="col-12 activity-spec" *ngIf="activityList !== undefined">
+            <div class="row d-flex justify-content-between">
+              <div class="col-6">
+                <h5>type</h5>
+                <p>{{activityList.type}}</p>
+              </div>
+              <div class="col-3">
+                <h5>budget</h5>
+                <p>{{activityList.price}}</p>
+              </div>
+              <div class="col-3">
+                <h5>people</h5>
+                <p>{{activityList.participants}}</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 actions mt-3">
+            <button (click)="saveActivity()">
+              ♥️
+            </button>
+          </div>
+
+        </div>
+      </div>
+      <!-- ------------ -->
+      <!-- <div *ngIf="activityList !== undefined" class="card_gen">
+        <div class="activity">
+          <h4>what do you think about...</h4>
+          <p>...{{ activityList.activity }}?</p>
+        </div>
+        <div class="activity-spec">
+          <div class="type-actv">
+            <h5>type</h5>
+            <p>{{activityList.type}}</p>
+          </div>
+          <div class="detail">
+            <h5>budget</h5>
+            <p>{{activityList.price}}</p>
+          </div>
+          <div class="detail">
+            <h5>people</h5>
+            <p>{{activityList.participants}}</p>
+          </div>
+          <div class="detail">
+            <h5>easiness</h5>
+            <p>{{activityList.accessibility}}</p>
+          </div>
+        </div>
+        <div class="actions">
+          <button (click)="saveActivity()">
+            SAVE ♥️
+          </button>
+        </div>
+      </div> -->
+    </div>
+
+  </div>
+</div>
+
+
+<!-- <div class="buttons">
   <div class="btns-up">
     <button (click)="getRandom()" class="btns btn-random">
       Random <br> 🎲🎲🎲
@@ -24,14 +166,12 @@
 
         </p>
         <button type="button" (click)="getByPeople(user)">
-          <!-- (click)="clickme()" -->
           <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M0.999977 5.00002H9.00002" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
             <path d="M5 1L9.00002 5.00002L5 9.00005" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
           </svg>
         </button>
       </form>
-      <!-- <p> for {{user}} </p> -->
     </div>
   </div>
   <div class="btn-down">
@@ -54,6 +194,8 @@
   </div>
 
 </div>
+
+
 <div *ngIf="activityList !== undefined" class="card_gen">
   <div class="activity">
     <h4>what do you think about...</h4>
@@ -82,11 +224,4 @@
       SAVE ♥️
     </button>
   </div>
-
-  <!-- <div class="actions">
-    <button (click)="getByType('?type=recreational')">
-      🎲 🎲 🎲 N e w A c t i v i t y by type 🎲 🎲 🎲
-    </button>
-  </div> -->
-
-</div>
+</div> -->

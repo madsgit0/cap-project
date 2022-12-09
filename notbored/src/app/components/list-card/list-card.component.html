@@ -1,31 +1,31 @@
-<div class="container-fluid lst-card">
+<div class="container-fluid lst-cards" ngClass={{post.done}} *ngFor="let post of posts, let i=index">
   <div class="row d-flex justify-content-between">
     <div class="col-12 col-md-7  activity-txt">
-      <p>1. Sit in the dark and listen to your favorite music with no distractions.</p>
+      <p>{{i+1}} - {{post.activity}}</p>
     </div>
     <div class="col-12 col-md-5 activity-spec">
       <div class="row d-flex justify-content-between">
         <div class="col-6">
           <h5>type</h5>
-          <p>Recreational</p>
+          <p>{{post.type}}</p>
         </div>
         <div class="col-3">
           <h5>budget</h5>
-          <p> 2</p>
+          <p> {{post.price}}</p>
         </div>
         <div class="col-3">
           <h5>people</h5>
-          <p> 2 </p>
+          <p> {{post.participants}} </p>
         </div>
       </div>
     </div>
     <div class="col-12 actions">
-      <button>
-        <i class="bi bi-check-circle"></i>
+      <button (click)="donePost(i)">
+        <i class=" bi bi-check-circle"></i>
       </button>
 
-      <button class="delete">
-        <i class="bi bi-trash2-fill"></i>
+      <button class="delete" (click)="deletePost(i)">
+        <i class=" bi bi-trash2-fill"></i>
       </button>
     </div>
 
