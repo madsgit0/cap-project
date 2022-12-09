@@ -1,4 +1,5 @@
-<div class="container-fluid lst-cards" ngClass={{post.done}} *ngFor="let post of posts, let i=index">
+<div class="container-fluid lst-cards animate__animated animate__fadeInUp" ngClass={{post.done}}
+  *ngFor="let post of posts, let i=index">
   <div class="row d-flex justify-content-between">
     <div class="col-12 col-md-7  activity-txt">
       <p>{{i+1}} - {{post.activity}}</p>
@@ -31,35 +32,3 @@
 
   </div>
 </div>
-<!-- <div class="container-fluid a" ngClass={{post.done}} *ngFor="let post of posts, let i=index">
-  <div class="row d-flex justify-content-between">
-    <div class="col-5 bg-success">
-      <p class="display">
-        {{i+1}} - {{post.activity}}
-      </p>
-    </div>
-    <div class="col-6 d-flex justify-content-between">
-      <div class="col-6 bg-primary">
-        <h5>type</h5>
-        <p> {{post.type}} </p>
-      </div>
-      <div class="col-4 bg-warning">
-        <h5>budget</h5>
-        <p> {{post.price}} </p>
-      </div>
-      <div class="col-4 bg-danger">
-        <h5>people</h5>
-        <p> {{post.participants}} </p>
-      </div>
-    </div>
-    <div class="col-2 bg-primary actions">
-      <button (click)="donePost(i)">
-        <i class="bi bi-check-circle"></i>
-      </button>
-
-      <button (click)="deletePost(i)">
-        <i class="bi bi-trash2-fill"></i>
-      </button>
-    </div>
-  </div>
-</div> -->

@@ -1,15 +1,78 @@
-.bg{
-  background: rgb(253,252,254);
-  background: linear-gradient(300deg, rgba(253,252,254,1) 0%, rgba(248,248,250,1) 100%);
-}
+// .bg{
+//   background: rgb(253,252,254);
+//   background: linear-gradient(300deg, rgba(253,252,254,1) 0%, rgba(248,248,250,1) 100%);
+// }
 
-.bg-2{
-  background-color: #ffffff;
-}
+// .bg-2{
+//   background-color: #ffffff;
+// }
 
-.round{
-  border-radius: 12px;
-  box-shadow: 0 0 35px rgba(0, 0, 0, 0.1);
+// .round{
+//   border-radius: 12px;
+//   box-shadow: 0 0 35px rgba(0, 0, 0, 0.1);
+// }
+
+// .head{
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+//   margin-top: 30px;
+
+//   .login{
+//     button{
+//       background-color: #7e5dda00;
+//       border: none;
+//       font-family: 'Work Sans';
+//       font-style: normal;
+//       font-weight: 400;
+//       font-size: 16px;
+//       line-height: 16px;
+//       color: #FFFFFF;
+//     }
+//     button:hover{
+//       text-decoration: underline;
+//     }
+//   }
+// }
+
+// ---------------------
+
+
+.aside{
+  height: 100vh;
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 35px;
+  color: #FFFFFF;
+  background-color: #7F5DDA;
+  text-align: center;
+
+
+  h1{
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 50px;
+    line-height: 59px;
+    text-align: center;
+    color: #FFFFFF;
+    margin-top: 50px;
+
+  }
+  img{
+    margin: 0;
+  }
+  p{
+    margin-top: 30px;
+    margin-bottom: 0;
+  }
+}
+@media (max-width: 768px) {
+  .hide{
+    display: none;
+  }
 }
 
 .head{
@@ -17,21 +80,88 @@
   justify-content: space-between;
   align-items: center;
   margin-top: 30px;
-
-  .login{
-    button{
+    p{
       background-color: #7e5dda00;
       border: none;
       font-family: 'Work Sans';
       font-style: normal;
       font-weight: 400;
-      font-size: 16px;
+      font-size: 14px;
       line-height: 16px;
       color: #FFFFFF;
     }
-    button:hover{
+    p:hover{
       text-decoration: underline;
     }
+  }
+
+.login{
+  overflow: hidden;
+
+  form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+    margin: 30px;
+  }
+
+  .label{
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 50px;
+    line-height: 59px;
+    color: #FFFFFF;
+    text-align: start;
+  }
+  label{
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 30px;
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  input{
+    width: 390px;
+    height: 40px;
+    border: none;
+    font-size: 14px;
+    color: #FFFFFF;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+  }
+
+  .submit{
+    width: 390px;
+    height: 44px;
+    background: #7F5DDA;
+    border-radius: 12px;
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.8);
+    border: none;
+    margin-top: 10px;
+  }
+  .submit:hover{
+    background: #5f45a6;
+  }
+  p{
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.8);
+    margin-top: 15px;
+  }
+  a{
+    color:#7F5DDA;
   }
 }
 

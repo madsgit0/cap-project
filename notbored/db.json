@@ -27,6 +27,13 @@
       "firstname": "Charde",
       "lastname": "Boone",
       "id": 4
+    },
+    {
+      "email": "cyjavycobi@mailinator.com",
+      "password": "$2a$10$lJ0XOCQcjKurxGfWGSRWz.1VLp4F2isf9yg1vnJG8Q8Fud8Jownpy",
+      "firstname": "Ross",
+      "lastname": "Kramer",
+      "id": 5
     }
   ],
   "posts": [
@@ -60,6 +67,5 @@
       "price": 0,
       "id": 4
     }
-
   ]
 }
