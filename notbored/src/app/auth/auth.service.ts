@@ -44,8 +44,8 @@ export class AuthService {
   logout(){
     this.isLogin = null;
     this.router.navigate(['/login'])
-    //localStorage.clear()
-    localStorage.removeItem('userlogin')
+    localStorage.clear()
+    //localStorage.removeItem('userlogin')
     console.log(this.isLogin)
   }
 

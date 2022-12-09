@@ -42,6 +42,10 @@ export class CardComponent implements OnInit {
     this.GenService.saveActivity().subscribe(resp => this.activityList = resp)
   }
 
+  getActivity(){
+    this.GenService.getActivity().subscribe(resp => this.activityList = resp)
+  }
+
   // getByPeople(){
   //   this.GenService.getByPeople().subscribe(resp => this.activityList = resp)
   // }

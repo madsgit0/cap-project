@@ -97,131 +97,14 @@
           </div>
 
           <div class="col-12 actions mt-3">
-            <button (click)="saveActivity()">
+            <button (click)="getActivity()">
               ♥️
             </button>
           </div>
 
         </div>
       </div>
-      <!-- ------------ -->
-      <!-- <div *ngIf="activityList !== undefined" class="card_gen">
-        <div class="activity">
-          <h4>what do you think about...</h4>
-          <p>...{{ activityList.activity }}?</p>
-        </div>
-        <div class="activity-spec">
-          <div class="type-actv">
-            <h5>type</h5>
-            <p>{{activityList.type}}</p>
-          </div>
-          <div class="detail">
-            <h5>budget</h5>
-            <p>{{activityList.price}}</p>
-          </div>
-          <div class="detail">
-            <h5>people</h5>
-            <p>{{activityList.participants}}</p>
-          </div>
-          <div class="detail">
-            <h5>easiness</h5>
-            <p>{{activityList.accessibility}}</p>
-          </div>
-        </div>
-        <div class="actions">
-          <button (click)="saveActivity()">
-            SAVE ♥️
-          </button>
-        </div>
-      </div> -->
     </div>
 
   </div>
 </div>
-
-
-<!-- <div class="buttons">
-  <div class="btns-up">
-    <button (click)="getRandom()" class="btns btn-random">
-      Random <br> 🎲🎲🎲
-    </button>
-    <div class="bdg-btn">
-      <button (click)="getByBudgetFree('?price=0.0')" class="btns btn-free">
-        For free <br> 🙏
-      </button>
-      <button (click)="getByBudgetPaid('?minprice=0.1&maxprice=1')" class="btns btn-paid">
-        No money <br>problem <br>here💸💸💸
-      </button>
-    </div>
-    <div class="btns btn-people">
-      <form>
-        <p>for
-          <input type="number" placeholder="2" id="user" name="user" min="2" max="10" [(ngModel)]="user">
-
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M7 14C7 14 6 14 6 13C6 12 7 9 11 9C15 9 16 12 16 13C16 14 15 14 15 14H7ZM11 8C11.7956 8 12.5587 7.68393 13.1213 7.12132C13.6839 6.55871 14 5.79565 14 5C14 4.20435 13.6839 3.44129 13.1213 2.87868C12.5587 2.31607 11.7956 2 11 2C10.2044 2 9.44129 2.31607 8.87868 2.87868C8.31607 3.44129 8 4.20435 8 5C8 5.79565 8.31607 6.55871 8.87868 7.12132C9.44129 7.68393 10.2044 8 11 8V8ZM5.216 14C5.06776 13.6878 4.99382 13.3455 5 13C5 11.645 5.68 10.25 6.936 9.28C6.30909 9.08684 5.65595 8.99237 5 9C1 9 0 12 0 13C0 14 1 14 1 14H5.216ZM4.5 8C5.16304 8 5.79893 7.73661 6.26777 7.26777C6.73661 6.79893 7 6.16304 7 5.5C7 4.83696 6.73661 4.20107 6.26777 3.73223C5.79893 3.26339 5.16304 3 4.5 3C3.83696 3 3.20107 3.26339 2.73223 3.73223C2.26339 4.20107 2 4.83696 2 5.5C2 6.16304 2.26339 6.79893 2.73223 7.26777C3.20107 7.73661 3.83696 8 4.5 8V8Z"
-              fill="black" />
-          </svg>
-
-        </p>
-        <button type="button" (click)="getByPeople(user)">
-          <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M0.999977 5.00002H9.00002" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
-            <path d="M5 1L9.00002 5.00002L5 9.00005" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
-          </svg>
-        </button>
-      </form>
-    </div>
-  </div>
-  <div class="btn-down">
-    <h3>Are you looking for somethig specific? Choose by type👇👇👇</h3>
-    <form>
-      <select class="type-select" id="atype" name="atype" [(ngModel)]="atype">
-        <option selected>Choose your preference</option>
-        <option value="?type=education">Education</option>
-        <option value="?type=recreational">Recreational</option>
-        <option value="?type=social">Social</option>
-        <option value="?type=diy">Diy</option>
-        <option value="?type=charity">Charity</option>
-        <option value="?type=cooking">Cooking</option>
-        <option value="?type=relaxation">Relaxation</option>
-        <option value="?type=music">Music</option>
-        <option value="?type=busywork">Busywork</option>
-      </select>
-      <input type="submit" value="Surprise me!" (click)="getByType(atype)">
-    </form>
-  </div>
-
-</div>
-
-
-<div *ngIf="activityList !== undefined" class="card_gen">
-  <div class="activity">
-    <h4>what do you think about...</h4>
-    <p>...{{ activityList.activity }}?</p>
-  </div>
-  <div class="activity-spec">
-    <div class="type-actv">
-      <h5>type</h5>
-      <p>{{activityList.type}}</p>
-    </div>
-    <div class="detail">
-      <h5>budget</h5>
-      <p>{{activityList.price}}</p>
-    </div>
-    <div class="detail">
-      <h5>people</h5>
-      <p>{{activityList.participants}}</p>
-    </div>
-    <div class="detail">
-      <h5>easiness</h5>
-      <p>{{activityList.accessibility}}</p>
-    </div>
-  </div>
-  <div class="actions">
-    <button (click)="saveActivity()">
-      SAVE ♥️
-    </button>
-  </div>
-</div> -->

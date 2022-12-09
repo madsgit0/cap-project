@@ -43,10 +43,14 @@ export class GenService {
     return this.http.get<Activities>(this.urlApi + type);
   }
 
-
   // getPosts():Observable<Activities> {
   //   return this.http.get<Activities>(this.urlPosts);
   // }
+
+  getActivity():Observable<Activities> {
+    console.log(this.urlPosts)
+    return this.http.get<Activities>(this.urlPosts);
+  }
 
   saveActivity():Observable<Activities>{
     return this.http.post<Activities>(this.urlPosts, Activities);
