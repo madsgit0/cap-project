@@ -14,6 +14,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AuthModule } from './auth/auth.module';
 import { HomePage } from './pages/home2/home.page';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { HomePage } from './pages/home2/home.page';
     FormsModule,
     HttpClientModule,
     AuthModule,
+    NgbModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

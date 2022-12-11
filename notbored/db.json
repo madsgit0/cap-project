@@ -101,6 +101,16 @@
       "key": "3352474",
       "accessibility": 0.1,
       "id": 20
+    },
+    {
+      "activity": "Learn how to beatbox",
+      "type": "recreational",
+      "participants": 1,
+      "price": 0,
+      "link": "https://en.wikipedia.org/wiki/Beatboxing",
+      "key": "8731710",
+      "accessibility": 1,
+      "id": 21
     }
   ]
 }
