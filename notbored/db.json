@@ -52,16 +52,6 @@
   ],
   "posts": [
     {
-      "activity": "Shred old documents you don't need anymore",
-      "type": "busywork",
-      "participants": 1,
-      "price": 0,
-      "link": "",
-      "key": "2430066",
-      "accessibility": 0,
-      "id": 5
-    },
-    {
       "activity": "Do something nice for someone you care about",
       "type": "social",
       "participants": 1,
@@ -72,17 +62,6 @@
       "id": 6
     },
     {
-      "activity": "Volunteer at your local food bank",
-      "type": "charity",
-      "participants": 1,
-      "price": 0,
-      "link": "",
-      "key": "2055368",
-      "accessibility": 0.1,
-      "id": 15,
-      "done": "done"
-    },
-    {
       "activity": "Start a webinar on a topic of your choice",
       "type": "education",
       "participants": 1,
@@ -90,7 +69,8 @@
       "link": "",
       "key": "6826029",
       "accessibility": 0.9,
-      "id": 16
+      "id": 16,
+      "done": "done"
     },
     {
       "activity": "Meditate for five minutes",
@@ -101,6 +81,26 @@
       "key": "3699502",
       "accessibility": 0.05,
       "id": 17
+    },
+    {
+      "activity": "Listen to a new music genre",
+      "type": "music",
+      "participants": 1,
+      "price": 0,
+      "link": "",
+      "key": "4708863",
+      "accessibility": 0,
+      "id": 18
+    },
+    {
+      "activity": "Read a formal research paper on an interesting subject",
+      "type": "education",
+      "participants": 1,
+      "price": 0,
+      "link": "",
+      "key": "3352474",
+      "accessibility": 0.1,
+      "id": 20
     }
   ]
 }

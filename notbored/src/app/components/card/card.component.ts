@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Activity } from 'src/app/classes/activity';
+import { Activity } from 'src/app/classes/activities';
 import { GenService } from 'src/app/services/gen.service';
 import { PostsService } from 'src/app/services/posts.service';
 import { SharedService } from 'src/app/services/shared.service';
