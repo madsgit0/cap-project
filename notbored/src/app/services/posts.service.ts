@@ -21,18 +21,21 @@ export class PostsService {
     console.log(this.urlPosts + "/" + id);
     return this.http.delete<Activity[]>(this.urlPosts + "/" + id);
   }
-
-  donePost(done:string):Observable<Activity> {
-    return this.http.put<Activity>(this.urlPosts, Activity)
+  donePost(activity:Activity):Observable<Activity> {
+    console.log(this.urlPosts + "/" + activity.id, activity);
+    return this.http.put<Activity>(this.urlPosts + "/" + activity.id, activity);
   }
 
-  saveActivity():Observable<Activity>{
-    return this.http.post<Activity>(this.urlPosts, Activity);
-  }
+  // donePost(done:string):Observable<Activity> {
+  //   return this.http.put<Activity>(this.urlPosts, Activity)
+  // }
 
   addPost(activity:Activity):Observable<Activity> {
     console.log(this.urlPosts, activity);
     return this.http.post<Activity>(this.urlPosts, activity)
   }
 
+  // saveActivity():Observable<Activity>{
+  //   return this.http.post<Activity>(this.urlPosts, Activity);
+  // }
 }

@@ -45,32 +45,55 @@
   ],
   "posts": [
     {
-      "activity": "learn to greet someone in a new language",
-      "type": "Education",
-      "participants": 1,
-      "price": 0.1,
-      "done": "",
-      "id": 1
-    },
-    {
-      "activity": "do qualcosa",
-      "type": "music",
+      "activity": "Shred old documents you don't need anymore",
+      "type": "busywork",
       "participants": 1,
       "price": 0,
-      "id": 4
+      "link": "",
+      "key": "2430066",
+      "accessibility": 0,
+      "id": 5
     },
     {
-      "activity": "francesco zizzi",
-      "type": "Recreational",
+      "activity": "Do something nice for someone you care about",
+      "type": "social",
       "participants": 1,
-      "price": 0.1,
-      "id": 12
+      "price": 0,
+      "link": "",
+      "key": "8321894",
+      "accessibility": 0.1,
+      "id": 6
     },
     {
-      "id": 13
+      "activity": "Back up important computer files",
+      "type": "busywork",
+      "participants": 1,
+      "price": 0.2,
+      "link": "",
+      "key": "9081214",
+      "accessibility": 0.2,
+      "id": 7,
+      "done": "done"
     },
     {
-      "id": 14
+      "activity": "Make a budget",
+      "type": "busywork",
+      "participants": 1,
+      "price": 0,
+      "link": "",
+      "key": "4379552",
+      "accessibility": 0.1,
+      "id": 11
+    },
+    {
+      "activity": "Volunteer at your local food bank",
+      "type": "charity",
+      "participants": 1,
+      "price": 0,
+      "link": "",
+      "key": "2055368",
+      "accessibility": 0.1,
+      "id": 15
     }
   ]
 }

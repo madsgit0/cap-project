@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Activity } from 'src/app/classes/activity';
 import { GenService } from 'src/app/services/gen.service';
 import { PostsService } from 'src/app/services/posts.service';
+import { SharedService } from 'src/app/services/shared.service';
 
 @Component({
   selector: 'app-card',
@@ -13,14 +14,12 @@ export class CardComponent implements OnInit {
   atype: string = '';
   user: string = '';
   posts:Activity[] = []
-  activityList: Activity | undefined;
+  activityList!: Activity ;
 
-  constructor(private  genService:GenService, private postsService:PostsService) { }
+  constructor(private  genService:GenService, private postsService:PostsService, private sharedService: SharedService) { }
 
   ngOnInit(): void {
     this.getRandom()
-    // this.getByPeople()
-
   }
 
   getRandom(){
@@ -40,41 +39,12 @@ export class CardComponent implements OnInit {
   }
 
   addPost(activity:Activity){
-    this.postsService.addPost(activity).subscribe(resp => this.posts.push(resp))
+    this.sharedService.sendClickEvent(activity)
   }
 
-  saveActivity(){
-    this.postsService.saveActivity().subscribe(resp => this.activityList = resp)
-  }
-
-  // getActivity(){
-  //   this.GenService.getActivity().subscribe(resp => this.activityList = resp)
+  // saveActivity(){
+  //   this.sharedService.saveActivity().subscribe(resp => this.activityList = resp)
   // }
-
-  // getByPeople(){
-  //   this.GenService.getByPeople().subscribe(resp => this.activityList = resp)
-  // }
-
-
-
-
-  // ngOnInit(): void {
-  //   this.GenService.getRandom().subscribe(resp => console.log(resp))
-  // }
-
-
-
-// addActivity(activity:Activities){
-//   this.GenService.addActivity(Activities.key).subscribe(resp => console.log(resp));
-// }
-// deleteActivity(activity:Activities){
-//   this.GenService.deleteActivity(Activities.id).subscribe(resp => console.log(resp));
-// }
-// deleteActivity(activity:Activities){
-//   this.GenService.deleteActivity(Activities.id).subscribe(resp =>{
-//     this.activityList = this.activityList.filter(ele => ele.id != Activities.id)
-//   });
-// }
 
 }
 
