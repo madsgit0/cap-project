@@ -34,6 +34,13 @@
       "firstname": "Ross",
       "lastname": "Kramer",
       "id": 5
+    },
+    {
+      "email": "mytyqujyla@mailinator.com",
+      "password": "$2a$10$z2poDaJCTFNa7SIuu8kYruAoYR1HHC2pEL4fYbvZIkljBkQETS9dm",
+      "firstname": "Marny",
+      "lastname": "Ellison",
+      "id": 6
     }
   ],
   "posts": [
@@ -46,26 +53,24 @@
       "id": 1
     },
     {
-      "activity": "learn calligraphy",
-      "type": "Education",
-      "participants": 1,
-      "price": 0.1,
-      "done": "done",
-      "id": 2
-    },
-    {
-      "activity": "do yoga",
-      "type": "Recreational",
-      "participants": 1,
-      "price": 0.1,
-      "id": 3
-    },
-    {
       "activity": "do qualcosa",
       "type": "music",
       "participants": 1,
       "price": 0,
       "id": 4
+    },
+    {
+      "activity": "francesco zizzi",
+      "type": "Recreational",
+      "participants": 1,
+      "price": 0.1,
+      "id": 12
+    },
+    {
+      "id": 13
+    },
+    {
+      "id": 14
     }
   ]
 }

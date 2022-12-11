@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Activities } from 'src/app/classes/activities';
-import { GenService } from 'src/app/services/gen.service';
+import { Activity } from 'src/app/classes/activity';
+import { PostsService } from 'src/app/services/posts.service';
 
 @Component({
   selector: 'app-list-card',
@@ -9,47 +9,36 @@ import { GenService } from 'src/app/services/gen.service';
 })
 export class ListCardComponent implements OnInit {
 
-  posts = [
-    {
-    activity: "learn to greet someone in a new language",
-    type: "Education",
-    participants: 1,
-    price: 0.1,
-    done: ""
-  },{
-    activity: "play a game of monopoly",
-    type: "Education",
-    participants: 1,
-    price: 0.1,
-    done: ""
-  },{
-    activity: "write a short story",
-    type: "Education",
-    participants: 1,
-    price: 0.1,
-    done: "done"
-  },{
-    activity: "memorize the fifty states and their capitals",
-    type: "Education",
-    participants: 1,
-    price: 0.1,
-    done: ""
-  }]
+  posts:Activity[] = []
 
-  activityList: Activities | undefined;
 
-  constructor(private  GenService:GenService) { }
+  constructor(private  postsService: PostsService) { }
 
   ngOnInit(): void {
-    //this.getPosts()
+    this.getPosts()
   }
 
 
+
+  getPosts(){
+    this.postsService.getPosts().subscribe(resp => this.posts = resp)
+    }
+
+  // donePost(done:string){
+  //   this.postsService.donePost(done).subscribe(resp => this.posts)
+  //   //this.posts[i].done = this.posts[i].done === "done" ? "" : "done" ;
+  // }
   donePost(i: number){
     this.posts[i].done = this.posts[i].done === "done" ? "" : "done" ;
   }
 
+
   deletePost(i: number){
+    this.postsService.deletePost(this.posts[i].id).subscribe()
     this.posts.splice(i,1);
+
   }
-}
+  }
+
+
+

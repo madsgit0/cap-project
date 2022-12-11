@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Activities } from 'src/app/classes/activities';
+import { Activity } from 'src/app/classes/activity';
 import { GenService } from 'src/app/services/gen.service';
+import { PostsService } from 'src/app/services/posts.service';
 
 @Component({
   selector: 'app-card',
@@ -11,10 +12,10 @@ export class CardComponent implements OnInit {
 
   atype: string = '';
   user: string = '';
+  posts:Activity[] = []
+  activityList: Activity | undefined;
 
-  activityList: Activities | undefined;
-
-  constructor(private  GenService:GenService) { }
+  constructor(private  genService:GenService, private postsService:PostsService) { }
 
   ngOnInit(): void {
     this.getRandom()
@@ -23,28 +24,32 @@ export class CardComponent implements OnInit {
   }
 
   getRandom(){
-    this.GenService.getRandom().subscribe(resp => this.activityList = resp)
+    this.genService.getRandom().subscribe(resp => this.activityList = resp)
   }
   getByBudgetFree(price:string){
-    this.GenService.getByBudgetFree(price).subscribe(resp => this.activityList = resp)
+    this.genService.getByBudgetFree(price).subscribe(resp => this.activityList = resp)
   }
   getByBudgetPaid(price:string){
-    this.GenService.getByBudgetPaid(price).subscribe(resp => this.activityList = resp)
+    this.genService.getByBudgetPaid(price).subscribe(resp => this.activityList = resp)
   }
   getByPeople(participants:any){
-    this.GenService.getByPeople(participants).subscribe(resp => this.activityList = resp)
+    this.genService.getByPeople(participants).subscribe(resp => this.activityList = resp)
   }
   getByType(type: string){
-    this.GenService.getByType(type).subscribe(resp => this.activityList = resp)
+    this.genService.getByType(type).subscribe(resp => this.activityList = resp)
+  }
+
+  addPost(activity:Activity){
+    this.postsService.addPost(activity).subscribe(resp => this.posts.push(resp))
   }
 
   saveActivity(){
-    this.GenService.saveActivity().subscribe(resp => this.activityList = resp)
+    this.postsService.saveActivity().subscribe(resp => this.activityList = resp)
   }
 
-  getActivity(){
-    this.GenService.getActivity().subscribe(resp => this.activityList = resp)
-  }
+  // getActivity(){
+  //   this.GenService.getActivity().subscribe(resp => this.activityList = resp)
+  // }
 
   // getByPeople(){
   //   this.GenService.getByPeople().subscribe(resp => this.activityList = resp)
