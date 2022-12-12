@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Activity } from '../classes/activities';
+import { Activity } from '../classes/activity';
 
 @Injectable({
   providedIn: 'root'
@@ -34,25 +34,4 @@ export class GenService {
     //console.log(this.urlApi + this.typeApi + type);
     return this.http.get<Activity>(this.urlApi + type);
   }
-
-  // getPosts():Observable<Activities> {
-  //   return this.http.get<Activities>(this.urlPosts);
-  // }
-
-  // getActivity():Observable<Activities> {
-  //   console.log(this.urlPosts)
-  //   return this.http.get<Activities>(this.urlPosts);
-  // }
-
-  // saveActivity():Observable<Activities>{
-  //   return this.http.post<Activities>(this.urlPosts, Activities);
-  // }
-
-  // addActivity(id:number | undefined):Observable<Activities>{
-  //   return this.http.get<Activities>(this.urlApi+id);
-  //}
-  // deleteActivity(id:number | undefined):Observable<Activities>{
-  //   return this.http.delete<Activities>(this.urlApi+id);
-  // }
-
 }

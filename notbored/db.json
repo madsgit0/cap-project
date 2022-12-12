@@ -48,30 +48,23 @@
       "firstname": "Darryl",
       "lastname": "Dudley",
       "id": 7
+    },
+    {
+      "email": "fideg@mailinator.com",
+      "password": "$2a$10$WURB6WPgk1isaxGQg.OmgeaM7XlitrGxIw9j9owcYoHCCB4jyIk52",
+      "firstname": "Hillary",
+      "lastname": "Lester",
+      "id": 8
+    },
+    {
+      "email": "wysizavy@mailinator.com",
+      "password": "$2a$10$zEubSNDzfqHQX0CW9u1R/Ob.8hO7SY/JzgWjAc1A.qLRgASol899m",
+      "firstname": "Dai",
+      "lastname": "Gutierrez",
+      "id": 9
     }
   ],
   "posts": [
-    {
-      "activity": "Do something nice for someone you care about",
-      "type": "social",
-      "participants": 1,
-      "price": 0,
-      "link": "",
-      "key": "8321894",
-      "accessibility": 0.1,
-      "id": 6
-    },
-    {
-      "activity": "Start a webinar on a topic of your choice",
-      "type": "education",
-      "participants": 1,
-      "price": 0,
-      "link": "",
-      "key": "6826029",
-      "accessibility": 0.9,
-      "id": 16,
-      "done": "done"
-    },
     {
       "activity": "Meditate for five minutes",
       "type": "relaxation",
@@ -80,7 +73,8 @@
       "link": "",
       "key": "3699502",
       "accessibility": 0.05,
-      "id": 17
+      "id": 17,
+      "done": "done"
     },
     {
       "activity": "Listen to a new music genre",
@@ -100,17 +94,70 @@
       "link": "",
       "key": "3352474",
       "accessibility": 0.1,
-      "id": 20
+      "id": 20,
+      "done": "done"
     },
     {
-      "activity": "Learn how to beatbox",
-      "type": "recreational",
+      "activity": "Listen to a new music genre",
+      "type": "music",
       "participants": 1,
       "price": 0,
-      "link": "https://en.wikipedia.org/wiki/Beatboxing",
-      "key": "8731710",
-      "accessibility": 1,
-      "id": 21
+      "link": "",
+      "key": "4708863",
+      "accessibility": 0,
+      "id": 33
+    },
+    {
+      "activity": "Fix something that's broken in your house",
+      "type": "diy",
+      "participants": 1,
+      "price": 0.1,
+      "link": "",
+      "key": "6925988",
+      "accessibility": 0.3,
+      "id": 35,
+      "done": "done"
+    },
+    {
+      "activity": "Have a bonfire with your close friends",
+      "type": "social",
+      "participants": 4,
+      "price": 0.1,
+      "link": "",
+      "key": "8442249",
+      "accessibility": 0.1,
+      "id": 36
+    },
+    {
+      "activity": "Create a cookbook with your favorite recipes",
+      "type": "cooking",
+      "participants": 1,
+      "price": 0,
+      "link": "",
+      "key": "1947449",
+      "accessibility": 0.05,
+      "id": 37,
+      "done": "done"
+    },
+    {
+      "activity": "Bake something you've never tried before",
+      "type": "cooking",
+      "participants": 1,
+      "price": 0.4,
+      "link": "",
+      "key": "5665663",
+      "accessibility": 0.3,
+      "id": 38
+    },
+    {
+      "activity": "Bake pastries for you and your neighbor",
+      "type": "cooking",
+      "participants": 1,
+      "price": 0.4,
+      "link": "",
+      "key": "8125168",
+      "accessibility": 0.3,
+      "id": 39
     }
   ]
 }
